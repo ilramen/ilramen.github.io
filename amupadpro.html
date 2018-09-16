@@ -1,92 +1,84 @@
 <!doctype html>
 <html>
 
-   <head>
-   	   <title>Antecer</title>
-   	   <meta name="viewport" content="width=device-width, initial-scale=1">
-   	   <link href="styles/main.css" rel="stylesheet" type="text/css" />
-   </head>
+<head>
+	<title>Antecer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="styles/main.css" rel="stylesheet" type="text/css" />
+</head>
 
+<body class="bodyindex">
+	<iframe src="head.html" width="100%"; height="auto" frameborder="0" scrolling="no" name="titleBar"></iframe>
 
-   <body>
-  <header><h1 class="header">ANTECER</h1></header>
+	<div class="slideshow-container">
 
-<div>
- <nav class="topnav">
-  <a href="index.html">Home</a> 
-  <a href="prod.html" class="active">Products</a>
-  <a href="app.html">Applications</a>
-  <a href="stick.html">Customization</a>
-  <a href="track/html">Tracking</a>
-  <a href="help.html">Contact/Help</a>     
- </nav>
-</div>
+		<div class="mySlides fade">
+			<div class="numbertext">1 / 4</div>
+			<img src="images/amuprod1.png" style="width:100%">
+			<div class="text"></div>
+		</div>
 
-<div class="slideshow-container">
+		<div class="mySlides fade">
+			<div class="numbertext">2 / 4</div>
+			<img src="images/amuprod2.png" style="width:100%">
+			<div class="text"></div>
+		</div>
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 4</div>
-  <img src="images/amuprod1.png" style="width:100%">
-  <div class="text"></div>
-</div>
+		<div class="mySlides fade">
+			<div class="numbertext">3 / 4</div>
+			<img src="images/amuprod3.png" style="width:100%">
+			<div class="text"></div>
+		</div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 4</div>
-  <img src="images/amuprod2.png" style="width:100%">
-  <div class="text"></div>
-</div>
+		<div class="mySlides fade">
+			<div class="numbertext">4 / 4</div>
+			<img src="images/amuprod4.png" style="width:100%">
+			<div class="text"></div>
+		</div>
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 4</div>
-  <img src="images/amuprod3.png" style="width:100%">
-  <div class="text"></div>
-</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-<div class="mySlides fade">
-  <div class="numbertext">4 / 4</div>
-  <img src="images/amuprod4.png" style="width:100%">
-  <div class="text"></div>
-</div>
+	</div>
+	<br>
 
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
 
-</div>
-<br>
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
 
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) {
+				slideIndex = 1
+			}
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
+	</script>
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
-<div class="footer">
-  <p>Antecer</p>
-</div>
-   </body>
+	<div class="footer">
+		<p>Antecer</p>
+	</div>
+</body>
 
 
 
