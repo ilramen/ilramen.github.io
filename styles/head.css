@@ -1,0 +1,71 @@
+.logo {
+	position: fixed;
+	width: 380px;
+	height: 126px;
+	padding: 30px;
+	top: 0px;
+	left: 0px;
+}
+
+.logo .text{
+    font-size: 36px;
+    font-weight: bold;
+    fill: none;
+    stroke-width: 2px;
+    stroke-dasharray: 90 310;
+    animation: stroke 6s infinite linear;
+}
+
+.logo .text-1 {
+	stroke: #3498db;
+	text-shadow: 0 0 5px #3498db;
+	animation-delay: -1.5s;
+}
+
+.logo .text-2 {
+	stroke: #f39c12;
+	text-shadow: 0 0 5px #f39c12;
+	animation-delay: -3s;
+}
+
+.logo .text-3 {
+	stroke: #e74c3c;
+	text-shadow: 0 0 5px #e74c3c;
+	animation-delay: -4.5s;
+}
+
+.logo .text-4 {
+	stroke: #9b59b6;
+	text-shadow: 0 0 5px #9b59b6;
+	animation-delay: -6s;
+}
+
+@keyframes stroke {
+	100% {
+		stroke-dashoffset: -400;
+	}
+}
+
+#trackbar {
+	display: flex;
+	justify-content: flex-end;
+	padding: 30px;
+	height: 100%;
+	width: 100%;
+}
+
+#tracking_space {
+	flex-basis: 100%;
+}
+
+#tracking_number {
+	width: 200px;
+}
+
+#tracking_space1 {
+	flex-basis: 1px;
+}
+
+#tracker_button {
+	width: 60px;
+}
