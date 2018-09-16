@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AmusingDevice</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="script/jquery-3.1.1.min.js"></script>
+	<link href="styles/main.css" rel="stylesheet" type="text/css" />
+	<style>
+		#trackbar {
+			display: flex;
+			float: right;
+			padding: 30px;
+			height: 40%;
+			width: 100%;
+			padding-left: 40%;
+		}
+
+		#tracking_number {
+			width: 68%;
+		}
+
+		#tracker_button {
+			width: 30%;
+		}
+	</style>
+</head>
+
+<body class="bodyindex">
+	<header>
+		<h1 class="header">AmusingDevice</h1>
+		<div id="trackbar">
+			<input id="tracking_number" type="text" placeholder="Tracking Number" />
+			<input id="tracker_button" type="button" value="Track" />
+		</div>
+	</header>
+	<div>
+		<nav class="topnav">
+			<a href="index.html" class="active">Home</a>
+			<a href="prod.html">Products</a>
+			<a href="app.html">Applications</a>
+			<a href="stick.html">Customization</a>
+			<a href="track.html">Tracking</a>
+			<a href="help.html">Contact/Help</a>
+		</nav>
+	</div>
+	<script>
+		// tracking function
+		$("#tracking_number").keyup(function (e) {
+			if (e.keyCode == 13) {
+				window.open("https://t.17track.net#nums=" + $("#tracking_number").val().trim());
+			}
+		});
+		$("#tracker_button").click(function () {
+				window.open("https://t.17track.net#nums=" + $("#tracking_number").val().trim());
+		});
+
+		// show selected bar
+		$('.topnav a').attr('target', '_parent');
+		var aClick = sessionStorage.getItem('aClick');
+		if (aClick) {
+			$('.topnav a').removeAttr('class');
+			$('a[href*=' + aClick + ']').attr('class', 'active');
+		}
+		$('.topnav a').click(function () {
+			sessionStorage.setItem('aClick', $(this).attr('href').split('.')[0]);
+		});
+	</script>
+</body>
+
+</html>
