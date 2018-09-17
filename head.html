@@ -38,7 +38,7 @@
 	</header>
 	<div>
 		<nav class="topnav">
-			<a href="index.html" class="active">Home</a>
+			<a href="index.html">Home</a>
 			<a href="prod.html">Products</a>
 			<a href="app.html">Applications</a>
 			<a href="stick.html">Customization</a>
@@ -46,23 +46,25 @@
 		</nav>
 	</div>
 	<script>
+		// show selected bar
+		$('.topnav a').attr('target', '_parent');
+		var tabPage = document.referrer.match(/.*\/(.*?)\.html$/);
+		if (tabPage) {
+			$('.topnav a[href*=' + tabPage[1] + ']').attr('class', 'active');
+		} else {
+			$('.topnav a:first').attr('class', 'active');
+		}
+
 		// tracking function
+		var tarckAPI = "https://t.17track.net#nums=";
 		$("#tracking_number").keyup(function (e) {
 			if (e.keyCode == 13) {
-				window.open("https://t.17track.net#nums=" + $("#tracking_number").val().trim());
+				window.open(tarckAPI + $("#tracking_number").val().trim());
 			}
 		});
 		$("#tracker_button").click(function () {
-			window.open("https://t.17track.net#nums=" + $("#tracking_number").val().trim());
+			window.open(tarckAPI + $("#tracking_number").val().trim());
 		});
-
-		// show selected bar
-		$('.topnav a').attr('target', '_parent');
-		var tabPage = document.referrer.match(/.*\/(.*?)\.html$/)[1];
-		if(tabPage){
-			$('.topnav a').removeAttr('class');
-			$('a[href*=' + tabPage + ']').attr('class', 'active');
-		}
 	</script>
 </body>
 
