@@ -1,3 +1,5 @@
+/* Antecer */
+=======
 body {
 	background: rgb(255,255,255);
 	font-family: arial;
@@ -14,35 +16,12 @@ header {
 	background-color: #00ccff;
 	margin: 0;
 }
+/* master */
 
 h1 {
 	color: White;
 	padding: 30px;
 	margin: 0;
-}
-
-.topnav {
-	background-color: #004d80;
-	overflow: hidden;
-}
-
-.topnav a {
-	float: left;
-	color: #ffffff;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
-}
-
-.topnav a:hover {
-	background-color: #ffffff;
-	color: black;
-}
-
-.topnav a.active {
-	background-color: #00ccff;
-	color: white;
 }
 
 * {
@@ -66,6 +45,10 @@ nav ul {
 	box-sizing: border-box;
 }
 
+/* Antecer */
+
+=======
+/* master */
 .mySlides {
 	display: none;
 }
@@ -331,9 +314,6 @@ img {
 * {
 	box-sizing: border-box;
 }
-body {
-	font: 16px Arial;
-}
 .autocomplete {
 	/*the container must be positioned relative:*/
 
@@ -411,10 +391,6 @@ input[type=submit] {
 
 * {
 	box-sizing: border-box
-}
-body {
-	font-family: Verdana, sans-serif;
-	margin: 0
 }
 .mySlides {
 	display: none
