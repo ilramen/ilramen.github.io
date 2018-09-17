@@ -1,52 +1,42 @@
-body {
-	background: url(../images/title-bg.jpg) no-repeat center top;
-	margin: 0;
-	/* margin: 0 auto; */
-}
-
-header {
-	height: 1rem;
-    display: -webkit-flex;
-    display: flex;
-	justify-content: space-between;
-}
-
 .logo {
-	height: 1rem;
-	width: 3.6rem;
-	dominant-baseline: middle;
+	position: fixed;
+	width: 380px;
+	height: 126px;
+	padding: 30px;
+	top: 0px;
+	left: 0px;
 }
 
-.logo .text {
-	font-size: 0.36rem;
-	font-weight: bold;
-	fill: none;
-	stroke-width: 0.02rem;
-	stroke-dasharray: 9rem 3.1rem;
-	animation: stroke 6s infinite linear;
+.logo .text{
+    font-size: 36px;
+    font-weight: bold;
+    fill: none;
+    stroke-width: 2px;
+    stroke-dasharray: 90 310;
+    animation: stroke 6s infinite linear;
 }
 
 .logo .text-1 {
 	stroke: #3498db;
-	text-shadow: 0rem 0rem 0.05rem #3498db;
+	text-shadow: 0 0 5px #3498db;
 	animation-delay: -1.5s;
 }
 
 .logo .text-2 {
 	stroke: #f39c12;
-	text-shadow: 0rem 0rem 0.05rem #f39c12;
+	text-shadow: 0 0 5px #f39c12;
 	animation-delay: -3s;
 }
 
 .logo .text-3 {
 	stroke: #e74c3c;
-	text-shadow: 0rem 0rem 0.05rem #e74c3c;
+	text-shadow: 0 0 5px #e74c3c;
 	animation-delay: -4.5s;
 }
 
 .logo .text-4 {
 	stroke: #9b59b6;
-	text-shadow: 0rem 0rem 0.05rem #9b59b6;
+	text-shadow: 0 0 5px #9b59b6;
 	animation-delay: -6s;
 }
 
@@ -56,51 +46,26 @@ header {
 	}
 }
 
-
-input {
-	display: block;
-	border: 0.01rem solid transparent;
-	background-color: #f1f1f1;
-	padding: 0.1rem;
-	font-size: 0.16rem;
+#trackbar {
+	display: flex;
+	justify-content: flex-end;
+	padding: 30px;
+	height: 100%;
+	width: 100%;
 }
 
-.trackBar {
-	display: inline-flex;
-	justify-content: space-between;
-	margin: 0.3rem 0.2rem;
-	height: 0.4rem;
-	width: 2.24rem;
+#tracking_space {
+	flex-basis: 100%;
 }
 
 #tracking_number {
-	width: 1.4rem;
+	width: 200px;
+}
+
+#tracking_space1 {
+	flex-basis: 1px;
 }
 
 #tracker_button {
-	width: 0.6rem;
-}
-
-.topnav {
-	height: 0.5rem;
-    display: -webkit-flex;
-    display: flex;
-	background-color: #FFFFFF10;
-}
-
-.topnav a {
-	color: #FFFFFF;
-	text-align: center;
-	padding: 0.14rem 0.16rem;
-	text-decoration: none;
-	font-size: 0.18rem;
-}
-
-.topnav a:hover {
-	background-color: #FFFFFF40;
-}
-
-.topnav a.active {
-	/* background-color: #EEEEEE; */
-	color: #00FFFF;
+	width: 60px;
 }
