@@ -2,6 +2,7 @@ body {
 	background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%);
 	font-family: arial;
 	margin: 0;
+	font-family: Verdana, sans-serif;
 }
 
 .bodyindex {
@@ -63,10 +64,6 @@ nav ul {
 
 * {
 	box-sizing: border-box;
-}
-
-body {
-	font-family: Verdana, sans-serif;
 }
 
 .mySlides {
