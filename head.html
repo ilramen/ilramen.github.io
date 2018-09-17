@@ -1,69 +1,65 @@
 <!DOCTYPE html>
-<html class="animated fadeIn">
+<html>
 
 <head>
 	<title>Navigation Bar</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+	/>
 	<script src="script/jquery-3.1.1.min.js"></script>
-	<link href="styles/main.css" rel="stylesheet" type="text/css" />
+	<link href="styles/default.css" rel="stylesheet" type="text/css" />
 	<link href="styles/head.css" rel="stylesheet" type="text/css" />
-	<link href="styles/animate.css" rel="stylesheet" />
 </head>
 
-<body class="bodyindex">
+<body>
 	<header>
 		<!-- <h1 class="header">AmusingDevice</h1> -->
-		<div class="logo">
-			<svg width="100%" height="100%">
-				<text text-anchor="middle" x="50%" y="50%" class="text text-1">
-					AmusingDevice
-				</text>
-				<text text-anchor="middle" x="50%" y="50%" class="text text-2">
-					AmusingDevice
-				</text>
-				<text text-anchor="middle" x="50%" y="50%" class="text text-3">
-					AmusingDevice
-				</text>
-				<text text-anchor="middle" x="50%" y="50%" class="text text-4">
-					AmusingDevice
-				</text>
-			</svg>
-		</div>
-		<div id="trackbar">
-			<div id="tracking_space"></div>
+		<svg class="logo">
+			<text text-anchor="middle" x="50%" y="50%" class="text text-1">
+				AmusingDevice
+			</text>
+			<text text-anchor="middle" x="50%" y="50%" class="text text-2">
+				AmusingDevice
+			</text>
+			<text text-anchor="middle" x="50%" y="50%" class="text text-3">
+				AmusingDevice
+			</text>
+			<text text-anchor="middle" x="50%" y="50%" class="text text-4">
+				AmusingDevice
+			</text>
+		</svg>
+		<div class="trackBar">
 			<input id="tracking_number" type="text" placeholder="Tracking Number" />
-			<div id="tracking_space1"></div>
 			<input id="tracker_button" type="button" value="Track" />
 		</div>
 	</header>
-	<div>
-		<nav class="topnav">
-			<a href="index.html" class="active">Home</a>
-			<a href="prod.html">Products</a>
-			<a href="app.html">Applications</a>
-			<a href="stick.html">Customization</a>
-			<a href="help.html">Contact/Help</a>
-		</nav>
+	<div class="topnav">
+		<a href="index.html">Home</a>
+		<a href="prod.html">Products</a>
+		<a href="app.html">Applications</a>
+		<a href="stick.html">Customization</a>
+		<a href="help.html">Contact/Help</a>
 	</div>
 	<script>
+		// show selected bar
+		$('.topnav a').attr('target', '_parent');
+		var tabPage = document.referrer.match(/.*\/(.*?)\.html$/);
+		if (tabPage) {
+			$('.topnav a[href*=' + tabPage[1] + ']').attr('class', 'active');
+		} else {
+			$('.topnav a:first').attr('class', 'active');
+		}
+
 		// tracking function
+		var tarckAPI = "https://t.17track.net#nums=";
 		$("#tracking_number").keyup(function (e) {
 			if (e.keyCode == 13) {
-				window.open("https://t.17track.net#nums=" + $("#tracking_number").val().trim());
+				window.open(tarckAPI + $("#tracking_number").val().trim());
 			}
 		});
 		$("#tracker_button").click(function () {
-			window.open("https://t.17track.net#nums=" + $("#tracking_number").val().trim());
+			window.open(tarckAPI + $("#tracking_number").val().trim());
 		});
-
-		// show selected bar
-		$('.topnav a').attr('target', '_parent');
-		var tabPage = document.referrer.match(/.*\/(.*?)\.html$/)[1];
-		if(tabPage){
-			$('.topnav a').removeAttr('class');
-			$('a[href*=' + tabPage + ']').attr('class', 'active');
-		}
 	</script>
 </body>
 
