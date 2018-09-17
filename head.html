@@ -58,14 +58,11 @@
 
 		// show selected bar
 		$('.topnav a').attr('target', '_parent');
-		var aClick = sessionStorage.getItem('aClick');
-		if (aClick) {
+		var tabPage = document.referrer.match(/.*\/(.*?)\.html$/)[1];
+		if(tabPage){
 			$('.topnav a').removeAttr('class');
-			$('a[href*=' + aClick + ']').attr('class', 'active');
+			$('a[href*=' + tabPage + ']').attr('class', 'active');
 		}
-		$('.topnav a').click(function () {
-			sessionStorage.setItem('aClick', $(this).attr('href').split('.')[0]);
-		});
 	</script>
 </body>
 
