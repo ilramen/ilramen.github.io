@@ -1,3 +1,22 @@
+/* Antecer */
+=======
+body {
+	background: rgb(255,255,255);
+	font-family: arial;
+	margin: 0;
+	font-family: Verdana, sans-serif;
+}
+
+.bodyindex {
+	background: rgb(255,255,255);
+}
+
+header {
+	display: flex;
+	background-color: #00ccff;
+	margin: 0;
+}
+/* master */
 
 h1 {
 	color: White;
@@ -26,7 +45,10 @@ nav ul {
 	box-sizing: border-box;
 }
 
+/* Antecer */
 
+=======
+/* master */
 .mySlides {
 	display: none;
 }
