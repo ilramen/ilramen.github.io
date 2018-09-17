@@ -1,11 +1,11 @@
 body {
-	background: White;
+	background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%);
 	font-family: arial;
 	margin: 0;
 }
 
 .bodyindex {
-	background-color: #004d80;
+	background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%);
 }
 
 header {
