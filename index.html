@@ -1,78 +1,33 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+    <head>
+        <meta charset=”UTF-8″ />
+        <title>Header Test</title>
+    </head>
 
-<head>
-	<title>Home</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="script/jquery-3.1.1.min.js"></script>
-	<link href="styles/main.css" rel="stylesheet" type="text/css" />
-</head>
+    <body>
+        <script src="pixi-v5.min.js"></script>
+        <script>
+            let app = new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
+            document.body.appendChild(app.view);
 
-<body class="bodyindex">
-	<iframe src="head.html" width="100%"; height="auto" frameborder="0" scrolling="no" name="titleBar"></iframe>
+            let img = new PIXI.Sprite.from("1.jpg");
+            img.width = window.innerWidth;
+            img.height = window.innerHeight;
+            app.stage.addChild(img);
 
-	<div class="slideshow-container" id="indexgal">
-		<a href="prod.html">
-			<div class="mySlides fade">
-				<div class="numbertext"></div>
-				<img src="images/s1.png" style="width:100%">
-				<div class="text"></div>
-			</div>
-		</a>
-		<a href="prod.html">
-			<div class="mySlides fade">
-				<div class="numbertext"></div>
-				<img src="images/s2.png" style="width:100%">
-				<div class="text"></div>
-			</div>
-		</a>
-		<a href="prod.html">
-			<div class="mySlides fade">
-				<div class="numbertext"></div>
-				<img src="images/s3.png" style="width:100%">
-				<div class="text"></div>
-			</div>
-		</a>
-	</div>
-	<br>
+            depthMap = new PIXI.Sprite.from("headerdeph.jpg");
+            app.stage.addChild(depthMap);
+        
+            displacementFilter = new PIXI.filters.DisplacementFilter(depthMap);
+            app.stage.filters = [displacementFilter];
 
-	<div style="text-align:center">
-		<span class="dot"></span>
-		<span class="dot"></span>
-		<span class="dot"></span>
-	</div>
+            window.onmousemove = function(e) {
+            displacementFilter.scale.x = (window.innerWidth / 2 - e.clientX) /20;
+            displacementFilter.scale.y = (window.innerHeight / 2 - e.clientY) /20;
+            };
 
-	<script>
-		var slideIndex = 0;
-		showSlides();
+        </script>
 
-		function showSlides() {
-			var i;
-			var slides = document.getElementsByClassName("mySlides");
-			var dots = document.getElementsByClassName("dot");
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
-			slideIndex++;
-			if (slideIndex > slides.length) {
-				slideIndex = 1
-			}
-			for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			}
-			slides[slideIndex - 1].style.display = "block";
-			dots[slideIndex - 1].className += " active";
-			setTimeout(showSlides, 4000); // Change image every 2 seconds
-		}
-	</script>
-
-
-
-	<div class="footer">
-		<p>Antecer</p>
-	</div>
-</body>
-
-
+    </body>
 
 </html>
