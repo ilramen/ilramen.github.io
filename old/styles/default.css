@@ -1,0 +1,55 @@
+html {
+	font-size: 625%;
+	background-color: black;
+	background-image: 
+	radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px),
+	radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px),
+	radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px),
+	radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+	background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+	background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+	html {
+		font-size: 703%;
+	}
+}
+
+@media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait) {
+	html {
+		font-size: 732.4%;
+	}
+}
+
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+	html {
+		font-size: 750%;
+	}
+}
+
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+	html {
+		font-size: 781.25%;
+	}
+}
+
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait) {
+	html {
+		font-size: 808.6%;
+	}
+}
+
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait) {
+	html {
+		font-size: 843.75%;
+	}
+}
+
+body {
+	font-size: 16px;
+	font-size: 0.16rem;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 10.8rem;
+	margin: 0 auto;
+}
